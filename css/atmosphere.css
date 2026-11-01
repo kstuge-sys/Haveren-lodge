@@ -1,0 +1,77 @@
+.atmosphere {
+  position: relative;
+  background: var(--fog);
+  overflow: hidden;
+}
+
+.breath-circle {
+  position: absolute;
+  width: min(60vw, 460px);
+  height: min(60vw, 460px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(116, 137, 111, 0.28), rgba(116, 137, 111, 0) 68%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.94);
+  animation: breathe 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.6; }
+  50% { transform: translate(-50%, -50%) scale(1.08); opacity: 1; }
+}
+
+.atmosphere-head {
+  position: relative;
+  text-align: center;
+  max-width: 46ch;
+  margin: 0 auto clamp(48px, 7vw, 76px);
+}
+
+.atmosphere-head h2 {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+
+.atmosphere-head p {
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.sensation-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 64px) clamp(40px, 6vw, 80px);
+}
+
+@media (max-width: 720px) {
+  .sensation-grid { grid-template-columns: 1fr; }
+}
+
+.sensation {
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+}
+
+.sensation h3 {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  font-size: 1.3rem;
+  margin: 0 0 10px;
+  color: var(--sage);
+}
+
+.sensation p {
+  margin: 0;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}

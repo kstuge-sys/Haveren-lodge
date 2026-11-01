@@ -1,0 +1,89 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(245, 245, 240, 0.88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px clamp(20px, 5vw, 56px);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.wordmark {
+  font-family: var(--font-wordmark);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.32rem;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.wordmark-place {
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: clamp(12px, 2vw, 26px);
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--sage);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--ink);
+  margin: 5px 0;
+}
+
+@media (max-width: 760px) {
+  nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--mist);
+    border-bottom: 1px solid var(--line-soft);
+    padding: 8px clamp(20px, 5vw, 56px) 24px;
+    gap: 14px;
+    display: none;
+  }
+  nav ul.open { display: flex; }
+  .nav-toggle { display: block; }
+}

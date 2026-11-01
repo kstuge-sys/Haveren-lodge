@@ -1,0 +1,16 @@
+footer {
+  padding: 44px 0 60px;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+  font-size: 0.87rem;
+  color: var(--ink-soft);
+}
+
+.footer-row a { text-decoration: none; border-bottom: 1px solid transparent; }
+.footer-row a:hover { border-bottom-color: var(--sage); }

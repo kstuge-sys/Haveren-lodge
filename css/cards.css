@@ -1,0 +1,38 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(28px, 3vw, 44px);
+}
+
+@media (max-width: 900px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .card-grid { grid-template-columns: 1fr; }
+}
+
+
+.card .placeholder-img {
+  position: static;
+  aspect-ratio: 5 / 4;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+}
+
+.rainy { background: var(--stone); }

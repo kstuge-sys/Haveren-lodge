@@ -1,0 +1,21 @@
+.lodge-gallery {
+  margin-top: clamp(40px, 6vw, 72px);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 14px;
+}
+
+.gallery-grid > .photo:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.gallery-grid > .photo:nth-child(4) { grid-column: span 2; }
+.gallery-grid > .photo:nth-child(7) { grid-column: span 2; }
+
+@media (max-width: 760px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
+  .gallery-grid > .photo:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+  .gallery-grid > .photo:nth-child(4),
+  .gallery-grid > .photo:nth-child(7) { grid-column: span 2; }
+}

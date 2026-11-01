@@ -1,0 +1,49 @@
+.photo {
+  margin: 0;
+  overflow: hidden;
+  background: var(--fog);
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero .photo {
+  position: absolute;
+  inset: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(245, 245, 240, 0.94) 0%,
+    rgba(245, 245, 240, 0.42) 38%,
+    rgba(245, 245, 240, 0.08) 62%,
+    transparent 78%
+  );
+}
+
+.intro .photo {
+  aspect-ratio: 4 / 5;
+}
+
+.card .photo {
+  aspect-ratio: 5 / 4;
+  margin-bottom: 20px;
+}
+
+.photo--top img {
+  object-position: center 22%;
+}
+
+.gallery-grid .photo {
+  height: 100%;
+}

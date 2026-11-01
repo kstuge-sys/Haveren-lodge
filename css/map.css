@@ -1,0 +1,52 @@
+.map-section {
+  padding-bottom: 0;
+}
+
+.map-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.map-head h2 {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  margin: 0;
+  color: var(--ink);
+}
+
+.map-head .kicker {
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.map-head a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.map-head a:hover {
+  border-bottom-color: var(--sage);
+}
+
+.map-frame {
+  position: relative;
+  width: 100%;
+  height: min(62vh, 520px);
+  background: var(--fog);
+  border-top: 1px solid var(--line-soft);
+}
+
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

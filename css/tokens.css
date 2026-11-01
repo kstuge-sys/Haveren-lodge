@@ -1,0 +1,15 @@
+:root {
+  --mist: #F5F5F0;
+  --fog: #E9EAE3;
+  --stone: #DCD5C4;
+  --ink: #2B302B;
+  --ink-soft: #5B6259;
+  --sage: #74896F;
+  --sky: #9FB2B9;
+  --line: rgba(43, 48, 43, 0.12);
+  --line-soft: rgba(43, 48, 43, 0.08);
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-wordmark: 'Bricolage Grotesque', sans-serif;
+  --font-body: Figtree, -apple-system, sans-serif;
+  --max: 1160px;
+}

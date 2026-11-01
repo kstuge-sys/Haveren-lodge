@@ -1,0 +1,39 @@
+section {
+  padding: clamp(64px, 10vw, 130px) 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: clamp(36px, 5vw, 60px);
+}
+
+.section-head.compact {
+  margin-bottom: 20px;
+}
+
+.section-head h2 {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  margin: 0;
+  max-width: 18ch;
+  color: var(--ink);
+}
+
+.section-head .kicker {
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+  max-width: 40ch;
+  margin: 0;
+}
+
+.no-border {
+  border-bottom: none;
+}
