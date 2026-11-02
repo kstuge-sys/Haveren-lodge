@@ -26,3 +26,43 @@
   .intro { grid-template-columns: 1fr; }
   .intro .media { order: -1; }
 }
+
+#lofoten .section-head h2 {
+  max-width: 11ch;
+}
+
+.lofoten-seasons {
+  display: grid;
+  gap: clamp(32px, 5vw, 56px);
+  max-width: 66ch;
+  margin-top: clamp(48px, 7vw, 88px);
+}
+
+.lofoten-seasons h3 {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  font-size: 1.3rem;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+
+.lofoten-seasons p {
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+}
+
+.lofoten-seasons p:last-child {
+  margin-bottom: 0;
+}
+
+.lofoten-seasons ul {
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--ink-soft);
+}
+
+.lofoten-seasons li + li {
+  margin-top: 8px;
+}

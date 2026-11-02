@@ -71,7 +71,7 @@ nav a[aria-current="page"] {
   margin: 5px 0;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   nav ul {
     position: absolute;
     top: 100%;
