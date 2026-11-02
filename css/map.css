@@ -50,3 +50,136 @@
   height: 100%;
   border: 0;
 }
+
+.getting-here-copy {
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+
+.getting-here-copy p { color: var(--ink-soft); }
+.getting-here-copy p:first-of-type { color: var(--ink); }
+
+.getting-here-map-block {
+  isolation: isolate;
+}
+
+.getting-here-map {
+  height: min(72vh, 680px);
+  min-height: 420px;
+  background: var(--fog);
+  border: 1px solid var(--line-soft);
+  z-index: 0;
+}
+
+.getting-here-map .leaflet-container {
+  font-family: var(--font-body);
+  background: var(--fog);
+}
+
+.getting-here-map img {
+  max-width: none;
+}
+
+.getting-here-map .leaflet-tile {
+  filter: grayscale(0.35) saturate(0.7) brightness(1.04);
+}
+
+.gh-marker {
+  background: none;
+  border: 0;
+}
+
+.gh-pin {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(245, 245, 240, 0.9);
+}
+
+.gh-pin--lodge {
+  width: 14px;
+  height: 14px;
+  background: var(--sage);
+}
+
+.gh-pin--air {
+  border-radius: 2px;
+  background: var(--ink);
+}
+
+.gh-pin--town {
+  background: var(--ink-soft);
+}
+
+.gh-pin-label,
+.gh-route-label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  white-space: nowrap;
+  text-shadow:
+    0 0 3px var(--mist),
+    0 0 6px var(--mist);
+}
+
+.gh-pin-label {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gh-route-label {
+  background: none;
+  border: 0;
+  color: var(--ink-soft);
+}
+
+.gh-route-label--e10 {
+  color: var(--sage);
+  font-weight: 600;
+}
+
+.getting-here-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.getting-here-legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-pin {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.legend-pin--lodge {
+  background: var(--sage);
+}
+
+.legend-pin--air {
+  border-radius: 2px;
+}
+
+.legend-line {
+  width: 22px;
+  height: 0;
+  border-top: 3px solid var(--sage);
+}
+
+.legend-line--boat {
+  border-top: 2px dashed var(--ink);
+}

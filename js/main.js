@@ -17,10 +17,18 @@ function initNav() {
   if (!toggle || !navList) return;
 
   const page = (location.pathname.split('/').pop() || 'index.html');
+  const hash = location.hash.replace('#', '');
   navList.querySelectorAll('a').forEach(a => {
     const href = a.getAttribute('href') || '';
-    const hrefPage = href.split('#')[0];
-    if (hrefPage && hrefPage === page) {
+    const [hrefPage, hrefHash] = href.split('#');
+    const pageMatch = (hrefPage || 'index.html') === page;
+    if (!pageMatch) return;
+    if (hrefHash) {
+      const current = hash || 'welcome';
+      if (hrefHash === current || (hrefHash === 'welcome' && (hash === '' || hash === 'top'))) {
+        a.setAttribute('aria-current', 'page');
+      }
+    } else {
       a.setAttribute('aria-current', 'page');
     }
   });
@@ -39,7 +47,12 @@ function initNav() {
 }
 
 loadIncludes()
-  .then(initNav)
+  .then(() => {
+    initNav();
+    if (typeof initGettingHereMap === 'function') {
+      initGettingHereMap();
+    }
+  })
   .catch((error) => {
     console.error(error);
     document.body.insertAdjacentHTML(

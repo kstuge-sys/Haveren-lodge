@@ -24,11 +24,14 @@
   pointer-events: none;
   background: linear-gradient(
     to top,
-    rgba(245, 245, 240, 0.94) 0%,
-    rgba(245, 245, 240, 0.42) 38%,
-    rgba(245, 245, 240, 0.08) 62%,
-    transparent 78%
+    rgba(245, 245, 240, 0.42) 0%,
+    rgba(245, 245, 240, 0.12) 22%,
+    transparent 48%
   );
+}
+
+.hero .photo img {
+  object-position: 68% 62%;
 }
 
 .intro .photo {
@@ -42,6 +45,26 @@
 
 .photo--top img {
   object-position: center 22%;
+}
+
+.photo--ski img {
+  object-position: 18% 72%;
+}
+
+.photo--henningsvar img {
+  object-position: center 42%;
+}
+
+.photo--arctic img {
+  object-position: center 72%;
+}
+
+.intro .photo--lodge {
+  aspect-ratio: 3 / 2;
+}
+
+.photo--lodge img {
+  object-position: center 58%;
 }
 
 .gallery-grid .photo {
